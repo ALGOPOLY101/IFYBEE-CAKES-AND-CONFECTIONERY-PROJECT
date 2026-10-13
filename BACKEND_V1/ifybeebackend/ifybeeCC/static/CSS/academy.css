@@ -1,0 +1,427 @@
+/* Academy styles */
+
+/* Page hero */
+.page-hero {
+    background: linear-gradient(135deg, #180a26 0%, #230c3b 60%, #35115a 100%);
+    color: #ffffff;
+    padding: 140px 0 70px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(198, 155, 37, 0.25);
+}
+
+.page-hero h1 {
+    font-size: 54px;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.page-hero p.page-hero-desc {
+    font-size: 17px;
+    color: #eae3ee;
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.notice-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(198, 155, 37, 0.15);
+    border: 1px solid #c69b25;
+    color: #e0b938;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+/* Current class spotlight section */
+.current-class {
+    background-color: #ffffff;
+    border: 1px solid #e8dccb;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(35, 12, 59, 0.08);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    margin-bottom: 70px;
+}
+
+.current-class-details {
+    padding: 45px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.status-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #e6f9ed;
+    color: #177a3d;
+    border: 1px solid #a3e5ba;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-pill .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #25d366;
+}
+
+.current-class-details h2 {
+    font-size: 38px;
+    color: #35115a;
+    margin-bottom: 16px;
+    line-height: 1.15;
+}
+
+.current-class-details p.class-desc {
+    font-size: 15px;
+    color: #6e6277;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+/* Class Information Meta Grid */
+.meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    background-color: #fffaf5;
+    border: 1px solid #e8dccb;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 26px;
+}
+
+.meta-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.meta-box i {
+    color: #c69b25;
+    font-size: 16px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.meta-box strong {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #35115a;
+    margin-bottom: 2px;
+}
+
+.meta-box span {
+    font-size: 13px;
+    color: #6e6277;
+}
+
+.registration-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.registration-box .button {
+    align-self: flex-start;
+}
+
+.registration-box small {
+    font-size: 12px;
+    color: #6e6277;
+    font-style: italic;
+}
+
+.current-class-image {
+    position: relative;
+    background-color: #180a26;
+    min-height: 420px;
+}
+
+.current-class-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-tag {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(35, 12, 59, 0.9);
+    border: 1px solid #c69b25;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.image-tag strong {
+    display: block;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    color: #e0b938;
+}
+
+/* Curriculum modules section */
+.curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-bottom: 70px;
+}
+
+.curriculum-card {
+    background-color: #ffffff;
+    border: 1px solid #e8dccb;
+    border-radius: 6px;
+    padding: 28px 20px;
+    box-shadow: 0 4px 15px rgba(35, 12, 59, 0.05);
+    transition: 0.3s ease;
+}
+
+.curriculum-card:hover {
+    transform: translateY(-5px);
+    border-color: #c69b25;
+}
+
+.module-num {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #c69b25;
+    margin-bottom: 8px;
+}
+
+.curriculum-card h3 {
+    font-size: 19px;
+    color: #35115a;
+    margin-bottom: 10px;
+}
+
+.curriculum-card p {
+    font-size: 13px;
+    color: #6e6277;
+    line-height: 1.6;
+}
+
+/* Previous classes: photos & videos showcase */
+.media-section-title {
+    margin-bottom: 30px;
+}
+
+.media-section-title h3 {
+    font-size: 28px;
+    color: #35115a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.media-section-title h3 i {
+    color: #c69b25;
+}
+
+.academy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.academy-card {
+    background-color: #ffffff;
+    border: 1px solid #e8dccb;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(35, 12, 59, 0.05);
+    transition: 0.3s ease;
+}
+
+.academy-card:hover {
+    transform: translateY(-5px);
+    border-color: #c69b25;
+}
+
+.academy-card-img {
+    height: 260px;
+    overflow: hidden;
+    background-color: #180a26;
+}
+
+.academy-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.academy-card:hover .academy-card-img img {
+    transform: scale(1.05);
+}
+
+.academy-card-body {
+    padding: 20px;
+}
+
+.academy-card-body h4 {
+    font-size: 20px;
+    color: #35115a;
+    margin-bottom: 6px;
+}
+
+.academy-card-body p {
+    font-size: 13px;
+    color: #6e6277;
+    line-height: 1.5;
+}
+
+/* Video Card Container */
+.academy-video-card {
+    background-color: #ffffff;
+    border: 1px solid #e8dccb;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(35, 12, 59, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.academy-video-frame {
+    height: 260px;
+    background-color: #0d0414;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.academy-video-frame video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #000000;
+}
+
+.academy-video-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Video Section Banner */
+.academy-featured-video {
+    background-color: #230c3b;
+    color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid rgba(198, 155, 37, 0.3);
+    padding: 40px;
+    margin-bottom: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.featured-video-box {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    height: 300px;
+    background-color: #000000;
+}
+
+.featured-video-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-video-text h3 {
+    font-size: 34px;
+    color: #ffffff;
+    margin-bottom: 14px;
+}
+
+.featured-video-text p {
+    font-size: 15px;
+    color: #eae3ee;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.video-credit-note {
+    font-size: 12px;
+    color: #e0b938;
+    font-style: italic;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 8px 12px;
+    border-radius: 4px;
+    border-left: 3px solid #c69b25;
+}
+
+/* Announcements notice board */
+.announcements-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.announcement-card {
+    background-color: #ffffff;
+    border: 1px solid #e8dccb;
+    border-left: 5px solid #35115a;
+    border-radius: 6px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 15px rgba(35, 12, 59, 0.05);
+}
+
+.announcement-card.gold-border {
+    border-left-color: #c69b25;
+}
+
+.announcement-date {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #c69b25;
+    margin-bottom: 8px;
+}
+
+.announcement-card h3 {
+    font-size: 22px;
+    color: #35115a;
+    margin-bottom: 10px;
+}
+
+.announcement-card p {
+    font-size: 14px;
+    color: #6e6277;
+    line-height: 1.65;
+    margin-bottom: 18px;
+}

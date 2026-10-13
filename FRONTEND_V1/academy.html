@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ifybee's Baking Academy — Practical hands-on baking, cake decorating, and pastry crafting masterclasses for beginners and enthusiasts.">
+    <title>Baking Academy | Ifybee's Cakes & Confectionery</title>
+    <link rel="icon" type="image/jpeg" href="IMAGES/ifybeeslogo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/academy.css">
+    <link rel="stylesheet" href="CSS/responsiveness.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Cakes and Confectionery Logo">
+            </a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+            </nav>
+            <div class="header-actions">
+                <button class="menu-toggle" id="menuBtn" aria-label="Open mobile menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <aside class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="mobile-logo">
+                <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Logo">
+            </a>
+            <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close mobile menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+        </nav>
+        <div class="mobile-menu-bottom">
+            <p>Beautiful cakes, fresh pastries, and creative baking education.</p>
+            <a href="https://wa.me/2348121402824?text=Hello%20Ifybee%27s%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" class="button button-whatsapp sidebar-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            <div class="sidebar-socials">
+                <a href="https://www.instagram.com/ifybeescakesandevents?dlrf=NmtrNG05b2NtMGFi" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@ifybeescakes001?_r=1&_t=ZS-9AV1gxz7m4N" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/IfybeesCakesAndEvents" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <!-- Academy Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <span class="notice-pill"><i class="fa-solid fa-graduation-cap"></i> Hands-on Training</span>
+                <h1>Ifybee's Baking <span>Academy.</span></h1>
+                <p class="page-hero-desc">
+                    Learn the art and master the craft. Step into our kitchen to explore practical cake baking techniques, professional fondant decorating, and artisan pastry making under encouraging mentorship.
+                </p>
+            </div>
+        </section>
+
+        <!-- Current Class -->
+        <section class="section">
+            <div class="container">
+                <div class="current-class">
+                    <div class="current-class-details">
+                        <div class="status-row">
+                            <span class="status-pill">
+                                <span class="dot"></span> Registration Open
+                            </span>
+                            <span class="badge badge-purple">Upcoming Workshop</span>
+                        </div>
+
+                        <h2>Cake Baking & Fondant <span>Masterclass</span></h2>
+                        <p class="class-desc">
+                            A comprehensive 5-day practical bootcamp for aspiring bakers and enthusiasts. Learn how to bake delicious sponge cakes from scratch, achieve sharp buttercream edges, sculpt fondant decorations, and bake commercial pastries.
+                        </p>
+
+                        <div class="meta-grid">
+                            <div class="meta-box">
+                                <i class="fa-regular fa-calendar-days"></i>
+                                <div>
+                                    <strong>Date:</strong>
+                                    <span>[Next Cohort: 15th – 20th Next Month]</span>
+                                </div>
+                            </div>
+                            <div class="meta-box">
+                                <i class="fa-regular fa-clock"></i>
+                                <div>
+                                    <strong>Schedule:</strong>
+                                    <span>[10:00 AM – 3:00 PM Daily]</span>
+                                </div>
+                            </div>
+                            <div class="meta-box">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <strong>Location:</strong>
+                                    <span>Ifybee Studio, No. 18 Umuodu Ihitte Isi Mbieri, Mbaitoli LGA, Owerri, Imo State</span>
+                                </div>
+                            </div>
+                            <div class="meta-box">
+                                <i class="fa-solid fa-user-graduate"></i>
+                                <div>
+                                    <strong>Skill Level:</strong>
+                                    <span>Beginner to Intermediate</span>
+                                </div>
+                            </div>
+                            <div class="meta-box">
+                                <i class="fa-solid fa-utensils"></i>
+                                <div>
+                                    <strong>Tools & Materials:</strong>
+                                    <span>Provided in class</span>
+                                </div>
+                            </div>
+                            <div class="meta-box">
+                                <i class="fa-solid fa-certificate"></i>
+                                <div>
+                                    <strong>Certificate:</strong>
+                                    <span>Issued upon completion</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="registration-box">
+                            <a href="https://wa.me/2348121402824?text=Hello%20Ifybee%27s%2C%20I%20would%20like%20to%20register%20for%20the%20upcoming%20Baking%20Masterclass." target="_blank" class="button button-whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i> Register on WhatsApp
+                            </a>
+                            <small>
+                                * Tap to send a pre-filled WhatsApp message. Our coordinator will provide syllabus details, fee structure, and reserve your seat.
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="current-class-image">
+                        <img src="IMAGES/academy/A.webp" alt="Practical Baking Academy Class in Session">
+                        <div class="image-tag">
+                            <span>Hands-on Learning</span>
+                            <strong>Real Studio Practicals</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curriculum -->
+                <div class="section-heading">
+                    <span class="section-label">WHAT YOU WILL LEARN</span>
+                    <h2>Structured for <span>real-world skills.</span></h2>
+                    <p>
+                        Our syllabus balances clear instruction with hands-on application, ensuring every student leaves with genuine kitchen confidence.
+                    </p>
+                </div>
+
+                <div class="curriculum-grid">
+                    <div class="curriculum-card">
+                        <div class="module-num">01</div>
+                        <h3>Cake Science & Sponges</h3>
+                        <p>
+                            Master recipes for vanilla sponge, moist chocolate, and velvety red velvet. Understand ingredient functions, leaveners, and oven temperature control.
+                        </p>
+                    </div>
+                    <div class="curriculum-card">
+                        <div class="module-num">02</div>
+                        <h3>Buttercream & Sharp Edges</h3>
+                        <p>
+                            Whip silky American and Swiss meringue buttercreams. Learn leveling, crumb coating, smooth acrylic disk finishes, and textured comb techniques.
+                        </p>
+                    </div>
+                    <div class="curriculum-card">
+                        <div class="module-num">03</div>
+                        <h3>Fondant & Sugar Art</h3>
+                        <p>
+                            Roll, drape, and smooth fondant without tears. Create delicate sugar blossoms, borders, bows, and silicone mold design accents.
+                        </p>
+                    </div>
+                    <div class="curriculum-card">
+                        <div class="module-num">04</div>
+                        <h3>Commercial Pastry & Costing</h3>
+                        <p>
+                            Bake flaky golden meat pies, roll sausage snacks, and fry glazed doughnuts. Learn recipe costing, cake pricing formulas, and bakery management basics.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Class Video -->
+                <div class="academy-featured-video">
+                    <div class="featured-video-box">
+                        <video controls poster="IMAGES/academy/acade.webp" preload="none">
+                            <source src="VIDEOS/VID_20260926_105441.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <div class="featured-video-text">
+                        <span class="section-label">VIDEO PREVIEW</span>
+                        <h3>See Learning <span>Come to Life.</span></h3>
+                        <p>
+                            Get a direct look inside our academy studio. Watch how students learn hands-on cake leveling, buttercream piping, and fondant molding during practical training.
+                        </p>
+                        <div class="video-credit-note">
+                            <strong>Studio Video:</strong> Authentic hands-on student practical training at Ifybee Academy studio.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Previous Classes -->
+                <div class="section-heading">
+                    <span class="section-label">ACADEMY MOMENTS</span>
+                    <h2>Memories from <span>past workshops.</span></h2>
+                    <p>
+                        Take a look at students creating, learning, and celebrating their baking milestones together.
+                    </p>
+                </div>
+
+                <div class="academy-grid">
+                    <div class="academy-card">
+                        <div class="academy-card-img">
+                            <video controls poster="IMAGES/academy/acade.webp" preload="none" style="width:100%;height:100%;object-fit:cover;">
+                                <source src="VIDEOS/VID_20260926_144544.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="academy-card-body">
+                            <h4>Mentorship Session</h4>
+                            <p>One-on-one coaching during a mentorship practical inside the Ifybee's studio.</p>
+                        </div>
+                    </div>
+                    <div class="academy-card">
+                        <div class="academy-card-img">
+                            <video controls poster="IMAGES/academy/A.webp" preload="none" style="width:100%;height:100%;object-fit:cover;">
+                                <source src="VIDEOS/78fc3f036b0c65d253dd30618456644f.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="academy-card-body">
+                            <h4>Cake Assembly Demo</h4>
+                            <p>Watch the full process — layering, crumb coating, and finishing a celebration cake from start to finish.</p>
+                        </div>
+                    </div>
+                    <div class="academy-card">
+                        <div class="academy-card-img">
+                            <img src="IMAGES/academy/A.webp" alt="Ifybee demonstrating cake decorating to students" loading="lazy">
+                        </div>
+                        <div class="academy-card-body">
+                            <h4>Live Demonstration</h4>
+                            <p>Our founder demonstrating professional fondant and buttercream finishing in class.</p>
+                        </div>
+                    </div>
+                    <div class="academy-card">
+                        <div class="academy-card-img">
+                            <img src="IMAGES/academy/acade.webp" alt="Students measuring ingredients and mixing cake batter" loading="lazy">
+                        </div>
+                        <div class="academy-card-body">
+                            <h4>Hands-on Practice</h4>
+                            <p>Learners carefully measuring ingredients and mastering mixing techniques from scratch.</p>
+                        </div>
+                    </div>
+                    <div class="academy-card">
+                        <div class="academy-card-img">
+                            <img src="IMAGES/academy/acsa.webp" alt="A proud academy student displaying her completed cake" loading="lazy">
+                        </div>
+                        <div class="academy-card-body">
+                            <h4>Student Achievement</h4>
+                            <p>A proud student showing off her finished cake — the result of skill, patience, and great mentorship.</p>
+                        </div>
+                    </div>
+                    <div class="academy-card">
+                        <div class="academy-card-img">
+                            <img src="IMAGES/academy/file_000000003fd08246ad0846f3a525e5c6.png" alt="Official Ifybee's Academy class announcement poster" loading="lazy">
+                        </div>
+                        <div class="academy-card-body">
+                            <h4>Class Announcement</h4>
+                            <p>Our official academy class flyer — details on curriculum, dates, and how to register for the next cohort.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Announcements -->
+                <div class="section-heading">
+                    <span class="section-label">ANNOUNCEMENTS & UPDATES</span>
+                    <h2>Latest academy <span>notices.</span></h2>
+                </div>
+
+                <div class="announcements-grid">
+                    <div class="announcement-card">
+                        <div class="announcement-date">Upcoming Schedule</div>
+                        <h3>Weekend Intensive Workshop</h3>
+                        <p>
+                            Designed specifically for busy working professionals and students who cannot attend weekday bootcamps. Covers complete cake baking and frosting over two intensive Saturdays.
+                        </p>
+                        <a href="https://wa.me/2348121402824?text=Hello%20Ifybee%27s%2C%20I%20am%20interested%20in%20the%20Weekend%20Intensive%20Workshop." target="_blank" class="text-link">
+                            Inquire on WhatsApp <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="announcement-card gold-border">
+                        <div class="announcement-date">Private Mentorship</div>
+                        <h3>One-on-One Practical Sessions</h3>
+                        <p>
+                            Want dedicated individual coaching on custom sugar flowers, tiered wedding cake construction, or advanced pastry craft? Personalized private sessions can be scheduled.
+                        </p>
+                        <a href="https://wa.me/2348121402824?text=Hello%20Ifybee%27s%2C%20I%20am%20interested%20in%20One-on-One%20Private%20Mentorship." target="_blank" class="text-link">
+                            Inquire on WhatsApp <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-banner" style="background: linear-gradient(135deg, #180a26 0%, #230c3b 60%, #35115a 100%); color: #ffffff; padding: 75px 0; text-align: center; border-top: 1px solid rgba(198, 155, 37, 0.25);">
+            <div class="container">
+                <div class="cta-banner-box" style="max-width: 720px; margin: 0 auto;">
+                    <span class="section-label">ENROLL TODAY</span>
+                    <h2 style="color: #ffffff; font-size: 44px; margin-bottom: 16px;">Ready to start your <span>baking journey?</span></h2>
+                    <p style="color: #eae3ee; font-size: 16px; margin-bottom: 30px; line-height: 1.7;">
+                        Seats are limited per cohort to ensure personalized attention for every student. Contact us to register.
+                    </p>
+                    <div class="cta-actions" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                        <a href="gallery.html" class="button outline-button">
+                            View Gallery Creations
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Logo">
+                    <p>
+                        Beautiful cakes, artisanal pastries, and practical baking education. Bringing joy to every celebration.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/ifybeescakesandevents?dlrf=NmtrNG05b2NtMGFi" target="_blank" class="footer-social-link" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@ifybeescakes001?_r=1&_t=ZS-9AV1gxz7m4N" target="_blank" class="footer-social-link" aria-label="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.facebook.com/IfybeesCakesAndEvents" target="_blank" class="footer-social-link" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Inspiration Gallery</a></li>
+                        <li><a href="academy.html">Baking Academy</a></li>
+                        <li><a href="about.html">About Ifybee's</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Offerings</h4>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Celebration Cakes</a></li>
+                        <li><a href="gallery.html">Artisan Pastries</a></li>
+                        <li><a href="academy.html">Hands-on Classes</a></li>
+                        <li><a href="academy.html">Upcoming Cohort</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp:</strong><br>
+                                <a href="https://wa.me/2348121402824?text=Hello%20Ifybee%27s%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank">+234 812 140 2824</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Studio:</strong><br>
+                                <span>No. 18 Umuodu Ihitte Isi Mbieri, Opposite Mmesoma Building, Mbaitoli LGA, Owerri, Imo State, Nigeria</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; <span id="currentYear">2026</span> Ifybee's Cakes & Confectionery. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="JS/main.js"></script>
+</body>
+</html>

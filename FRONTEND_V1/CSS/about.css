@@ -1,0 +1,271 @@
+/* About page styles */
+
+/* Page hero */
+.page-hero {
+    background: linear-gradient(135deg, #180a26 0%, #230c3b 60%, #35115a 100%);
+    color: #ffffff;
+    padding: 140px 0 70px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(198, 155, 37, 0.25);
+}
+
+.page-hero h1 {
+    font-size: 54px;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.page-hero p.page-hero-desc {
+    font-size: 17px;
+    color: #eae3ee;
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.notice-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(198, 155, 37, 0.15);
+    border: 1px solid #c69b25;
+    color: #e0b938;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+/* Story section */
+.about-story-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-story-grid h2 {
+    font-size: 46px;
+    margin-bottom: 18px;
+}
+
+.about-story-grid p {
+    font-size: 16px;
+    color: #6e6277;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.about-image-box {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e8dccb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.about-image-box img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+/* Mission & philosophy */
+.section-dark {
+    background-color: #230c3b;
+    color: #ffffff;
+}
+
+.section-dark h2 {
+    color: #ffffff;
+}
+
+.section-dark p {
+    color: #eae3ee;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.value-card {
+    background-color: #2e124d;
+    border: 1px solid rgba(198, 155, 37, 0.35);
+    border-top: 4px solid #c69b25;
+    padding: 35px 25px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    border-color: #c69b25;
+}
+
+.value-num {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #c69b25;
+    margin-bottom: 10px;
+}
+
+.value-card h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    font-size: 14px;
+    color: #eae3ee;
+    line-height: 1.6;
+}
+
+/* What ifybee offers */
+.offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.offer-card {
+    background-color: #ffffff;
+    border: 1px solid #e8dccb;
+    border-top: 4px solid #35115a;
+    padding: 35px 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(35, 12, 59, 0.05);
+    transition: 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    border-color: #c69b25;
+}
+
+.offer-icon {
+    font-size: 24px;
+    color: #c69b25;
+    margin-bottom: 12px;
+}
+
+.offer-card h3 {
+    font-size: 22px;
+    color: #35115a;
+    margin-bottom: 10px;
+}
+
+.offer-card p {
+    font-size: 14px;
+    color: #6e6277;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+/* Contact & social information */
+.contact-section {
+    background-color: #faf5ee;
+    border-top: 1px solid #e8dccb;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.contact-card {
+    background-color: #ffffff;
+    border: 1px solid #e8dccb;
+    border-radius: 6px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(35, 12, 59, 0.05);
+}
+
+.contact-card i.contact-main-icon {
+    font-size: 34px;
+    color: #35115a;
+    margin-bottom: 14px;
+    display: inline-block;
+}
+
+.contact-card h3 {
+    font-size: 20px;
+    color: #35115a;
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    font-size: 13px;
+    color: #6e6277;
+    margin-bottom: 16px;
+}
+
+.contact-card .button {
+    width: 100%;
+}
+
+.social-pill-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-pill-group a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #35115a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.social-pill-group a:hover {
+    background-color: #c69b25;
+    transform: translateY(-2px);
+}
+
+/* Cta banner */
+.cta-banner {
+    background: linear-gradient(135deg, #180a26 0%, #230c3b 60%, #35115a 100%);
+    color: #ffffff;
+    padding: 75px 0;
+    text-align: center;
+    border-top: 1px solid rgba(198, 155, 37, 0.25);
+    border-bottom: 1px solid rgba(198, 155, 37, 0.25);
+}
+
+.cta-banner-box {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.cta-banner-box h2 {
+    color: #ffffff;
+    font-size: 44px;
+    margin-bottom: 16px;
+}
+
+.cta-banner-box p {
+    color: #eae3ee;
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+

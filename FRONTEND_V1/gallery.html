@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ifybee's Cakes &amp; Confectionery Gallery — Visual portfolio of celebration cakes, artisan pastries, and baking academy photos and videos.">
+    <title>Inspiration Gallery | Ifybee's Cakes &amp; Confectionery</title>
+    <link rel="icon" type="image/jpeg" href="IMAGES/ifybeeslogo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/gallery.css">
+    <link rel="stylesheet" href="CSS/responsiveness.css">
+</head>
+<body>
+
+    <!-- # Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Cakes and Confectionery Logo">
+            </a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="academy.html">Academy</a>
+                <a href="about.html">About</a>
+            </nav>
+            <div class="header-actions">
+                <button class="menu-toggle" id="menuBtn" aria-label="Open mobile menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- # Sidebar -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <aside class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="mobile-logo">
+                <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Logo">
+            </a>
+            <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close mobile menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="academy.html">Academy</a>
+            <a href="about.html">About</a>
+        </nav>
+        <div class="mobile-menu-bottom">
+            <p>Beautiful cakes, fresh pastries, and creative baking education.</p>
+            <a href="https://wa.me/2348121402824?text=Hello%20Ifybee%27s%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" class="button button-whatsapp sidebar-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            <div class="sidebar-socials">
+                <a href="https://www.instagram.com/ifybeescakesandevents?dlrf=NmtrNG05b2NtMGFi" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@ifybeescakes001?_r=1&_t=ZS-9AV1gxz7m4N" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/IfybeesCakesAndEvents" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <!-- # Gallery Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>The Inspiration <span>Gallery.</span></h1>
+                <p class="page-hero-desc">
+                    A full showcase of our celebration cakes, Nigerian pastries and confectionery, and academy highlights. Browse photos and watch videos from inside the Ifybee's kitchen.
+                </p>
+            </div>
+        </section>
+
+        <!-- # Gallery Content -->
+        <section class="section" style="padding-top: 25px;">
+            <div class="container">
+                <div class="filters">
+                    <button class="filter-button active" data-filter="all">All Media</button>
+                    <button class="filter-button" data-filter="cakes">Cakes</button>
+                    <button class="filter-button" data-filter="pastries">Pastries &amp; Snacks</button>
+                    <button class="filter-button" data-filter="academy">Academy</button>
+                </div>
+
+                <div class="gallery-grid" id="galleryGrid">
+
+                    <!-- ===== CAKES ===== -->
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG_20250924_105701.jpg" alt="Pink Butterfly Birthday Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Pink Butterfly Birthday Cake</h3>
+                            <p>Soft pink buttercream with butterfly sugar decorations, gold leaf flakes, and a glitter Happy Birthday topper.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG_20250924_105701.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG_20261010_130340.jpg" alt="Chocolate Drip Rose Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Chocolate Drip Rose Cake</h3>
+                            <p>Classic white buttercream with chocolate drip sides, handcrafted sugar rose, and a personalised "Mummy" heart plaque.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG_20261010_130340.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/cakes/IMG_20261010_130340.jpg" preload="none">
+                                <source src="VIDEOS/VID-20261010-WA0055.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Cake Finishing — Live Reveal</h3>
+                            <p>Watch a freshly finished celebration cake being revealed on the turntable with final piping and decorative details.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's studio creation reveal.</div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/cakes/IMG_20260926_233223.jpg" preload="none">
+                                <source src="VIDEOS/Snapchat-764420159.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Fondant Sculpting — Close Up</h3>
+                            <p>A close-up video of delicate fondant sculpting and finishing detail work during cake decoration.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's decorating technique reel.</div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG_20251216_083501.jpg" alt="Artistic Floral Birthday Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Artistic Floral Birthday Cake</h3>
+                            <p>Handcrafted celebration cake with intricate floral piping, clean edges, and an elegant fondant finish.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG_20251216_083501.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG_20260721_201640.jpg" alt="Luxe Tiered Celebration Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Luxe Tiered Celebration Cake</h3>
+                            <p>Tall multi-tier cake dressed in pristine white fondant, crafted for high-end weddings and milestone celebrations.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG_20260721_201640.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/cakes/IMG_20260721_201640.jpg" preload="none">
+                                <source src="VIDEOS/VID_20261005_111416.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Grand Wedding Tier — Video Showcase</h3>
+                            <p>Full 360 video of a towering multi-tier wedding cake on display with detailed fondant work and floral accents.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's wedding cake reveal.</div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG_20260801_111223.jpg" alt="Golden Draped Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Golden Draped Cake</h3>
+                            <p>Opulent cake adorned with edible gold leaf drape accents and intricate border piping for special occasions.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG_20260801_111223.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/cakes/IMG_20260801_111223.jpg" preload="none">
+                                <source src="VIDEOS/VID_20261005_111300.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Celebration Masterpiece — 360° View</h3>
+                            <p>Turntable showcase of a finished celebration cake from every angle — admire the piping, drip and topper details.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's finished cake showcase.</div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG_20260817_132037.jpg" alt="Pristine Sharp Edge Buttercream Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Sharp Edge Buttercream Cake</h3>
+                            <p>Flawlessly smooth buttercream with razor-sharp edges achieved using acrylic disk technique — a signature Ifybee's finish.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG_20260817_132037.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/cakes/IMG_20260817_132037.jpg" preload="none">
+                                <source src="VIDEOS/Snapchat-988486984.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Buttercream Piping — Live Process</h3>
+                            <p>Video showing real-time piping and border finishing on a freshly iced cake — artistry in every swirl.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's piping technique reel.</div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG_20260926_233223.jpg" alt="Heritage Celebration Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Heritage Celebration Cake</h3>
+                            <p>Beautifully crafted cultural celebration cake with warm-toned decoration, made for a cherished family occasion.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG_20260926_233223.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG_20261005_111518.jpg" alt="Grand Anniversary Showcase Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Grand Anniversary Cake</h3>
+                            <p>Majestic multi-tier cake crafted for an anniversary milestone, featuring layered fondant panels and decorative accents.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG_20261005_111518.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/cakes/IMG_20261005_111518.jpg" preload="none">
+                                <source src="VIDEOS/VID_20261005_111504.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Handcrafted Sugar Flower — Close Up</h3>
+                            <p>Macro video of a beautifully handcrafted sugar flower arrangement placed atop a celebration cake.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's sugar art detail reel.</div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG_20251026_105754.jpg" alt="Drip & Topper Celebration Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Drip &amp; Topper Celebration Cake</h3>
+                            <p>Bold cake design featuring chocolate drip technique and decorative topper — a modern showstopper style.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG_20251026_105754.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG_20251206_093159.jpg" alt="Festive Holiday Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Festive Holiday Cake</h3>
+                            <p>Vibrant seasonal celebration cake with festive colour palette and decorative elements for holiday gatherings.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG_20251206_093159.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG_20251215_114912.jpg" alt="Blossom Floral Creation" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Blossom Floral Creation</h3>
+                            <p>Delicate piped sugar blossoms covering a beautifully finished single-tier cake — handmade petal by petal.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG_20251215_114912.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG_20260117_121602.jpg" alt="Geometric Modern Tiered Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Geometric Modern Tiered Cake</h3>
+                            <p>Contemporary tiered cake with structured geometric panelling and clean minimalist fondant styling.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG_20260117_121602.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG_20260211_103925.jpg" alt="Valentine Romantic Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Valentine Romantic Cake</h3>
+                            <p>Dreamy red-toned frosted cake crafted for romantic celebrations with heart motifs and love-inspired detailing.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG_20260211_103925.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/cakes/IMG_20260209_121534.jpg" preload="none">
+                                <source src="VIDEOS/Snapchat-981199960.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Tiered Cake Studio Showcase</h3>
+                            <p>Full video showcase of a decorated tiered cake inside the Ifybee's studio — light, detail, and craftsmanship on display.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's studio showcase reel.</div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG-20250103-WA0065.jpg" alt="Vibrant Custom Birthday Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Vibrant Custom Birthday Cake</h3>
+                            <p>Boldly coloured custom birthday cake with playful topper and vibrant fondant accents, made to order.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG-20250103-WA0065.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG-20250713-WA0087.jpg" alt="Multi-Tier Milestone Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Multi-Tier Milestone Cake</h3>
+                            <p>Elegant multi-tier cake commemorating a major life milestone, with smooth finishes and refined decorative layers.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG-20250713-WA0087.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG-20251203-WA0226.jpeg" alt="Deluxe Holiday Tiered Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Deluxe Holiday Tiered Cake</h3>
+                            <p>Rich festive layered cake finished in a luxurious palette with statement decorative topper and intricate side detailing.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG-20251203-WA0226.jpeg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/cakes/IMG-20251203-WA0226.jpeg" preload="none">
+                                <source src="VIDEOS/VID_20261010_130143.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Celebration Cake — Studio Reveal</h3>
+                            <p>Latest studio cake reveal video showing a beautifully finished celebration creation in full display.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's October creation reveal.</div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/cakes/IMG-20260329-WA0016.jpg" preload="none">
+                                <source src="VIDEOS/2026-10-10-190511764.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Birthday Cake Celebration Video</h3>
+                            <p>A vibrant birthday cake reveal video captured at an Ifybee's event — joy, colour, and celebration in every frame.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's birthday cake event reel.</div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/cakes/IMG_20260926_233223.jpg" preload="none">
+                                <source src="VIDEOS/watermark-2026-10-05-174747161.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Studio Creation Presentation</h3>
+                            <p>Behind-the-scenes studio video showcasing a finished Ifybee's cake creation with cinematic presentation.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's studio creation showcase.</div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/Snapchat-1047351630.jpg" alt="Modern Frosted Party Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Modern Frosted Party Cake</h3>
+                            <p>Contemporary frosted celebration cake with smooth finish, stylish topper, and vibrant festive colour palette.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/Snapchat-1047351630.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/Snapchat-1530514539.jpg" alt="Luxury Golden Crown Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Luxury Golden Crown Cake</h3>
+                            <p>Regal celebration cake with gold crown topper, smooth fondant, and statement gilded accents for milestone events.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/Snapchat-1530514539.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG-20260909-WA0030.jpg" alt="Signature Buttercream Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Signature Buttercream Cake</h3>
+                            <p>Thick, velvety buttercream finish with textured comb styling — clean, confident, and beautifully simple.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG-20260909-WA0030.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/cakes/IMG-20261007-WA0047.jpg" alt="Classic White Buttercream Cake" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Classic White Buttercream Cake</h3>
+                            <p>Timeless all-white buttercream cake with pearl borders and a refined elegance suited for any occasion.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/cakes/IMG-20261007-WA0047.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="cakes">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/cakes/IMG_20251030_113431.jpg" preload="none">
+                                <source src="VIDEOS/78fc3f036b0c65d253dd30618456644f.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Cakes</span>
+                            <h3>Cake Assembly &amp; Structure Demo</h3>
+                            <p>Extended video showing the full cake dowelling, stacking, and assembly process — real studio craftsmanship.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's cake build demonstration.</div>
+                        </div>
+                    </article>
+
+                    <!-- ===== PASTRIES & SNACKS ===== -->
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/pastries/meatpie.webp" alt="Golden Meat Pies" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Nigerian Meat Pie</h3>
+                            <p>A beloved Nigerian classic — flaky shortcrust pastry filled with well-seasoned minced meat, potatoes, and carrots. Baked golden.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/pastries/meatpie.webp" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/pastries/donughts.webp" alt="Soft Fried Doughnuts" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Soft Fried Doughnuts</h3>
+                            <p>Fluffy, pillow-soft yeast doughnuts fried to a warm golden colour. Perfect for snacking, events, or gifting.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/pastries/donughts.webp" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/pastries/IMG-20260528-WA0016.jpg" alt="Plantain Chips — Ifybee's Brand" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Plantain Chips</h3>
+                            <p>Crispy, golden plantain chips sliced thin and packaged in Ifybee's branded cups — a popular Nigerian snack done right.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/pastries/IMG-20260528-WA0016.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/pastries/IMG-20260527-WA0038(2).jpg" alt="Plantain Chips Jars" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Plantain Chips — Jar Pack</h3>
+                            <p>Large jar-packed plantain chips branded with Ifybee's Cakes label — ideal for gifting, events, and bulk orders.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/pastries/IMG-20260527-WA0038(2).jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/pastries/IMG-20260528-WA0018.jpg" alt="Small Chops Party Tray" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Small Chops Party Tray</h3>
+                            <p>Classic Nigerian event spread — puff puff, samosas, spring rolls, and suya arranged in a catering foil tray.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/pastries/IMG-20260528-WA0018.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/pastries/IMG-20260528-WA0018(1).jpg" alt="Small Chops Assortment" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Small Chops Assortment</h3>
+                            <p>Event-ready tray of puff puff, samosas, spring rolls, and grilled suya — a Nigerian party essential from Ifybee's.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/pastries/IMG-20260528-WA0018(1).jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/pastries/IMG-20260528-WA0020(1).jpg" alt="Assorted Mini Cake Cups" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Assorted Mini Cake Cups</h3>
+                            <p>Individual foil-packed mini cakes in assorted flavours — chocolate, vanilla, and caramel — packaged for gifting and events.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/pastries/IMG-20260528-WA0020(1).jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/pastries/IMG-20260528-WA0022(1).jpg" alt="Plantain Chips — Cup Packs" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Plantain Chips — Cup Packs</h3>
+                            <p>Sealed cup packs of crispy plantain chips, perfect for wedding favour bags, events, and retail snack packs.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/pastries/IMG-20260528-WA0022(1).jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/pastries/IMG-20260528-WA0022.jpg" alt="Buns — Fresh from the Fryer" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Nigerian Buns</h3>
+                            <p>Soft, round Nigerian buns fried to a light golden brown — a mildly sweet snack loved by all ages, packed in presentation boxes.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/pastries/IMG-20260528-WA0022.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/pastries/IMG-20260720-WA0069(1).jpg" alt="Puff Puff — Boxed Serving" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Puff Puff</h3>
+                            <p>Nigeria's most beloved street snack — light and airy deep-fried dough balls served warm in a takeaway box. Irresistibly addictive.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/pastries/IMG-20260720-WA0069(1).jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/pastries/IMG-20260720-WA0075.jpg" alt="Doughnuts — Fresh Baking Tray" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Doughnuts — Fresh Batch</h3>
+                            <p>Freshly fried plain doughnuts cooling on a baking tray — ready for glazing, dusting, or filling to order.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/pastries/IMG-20260720-WA0075.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/pastries/IMG-20260720-WA0073.jpg" alt="Doughnuts — Box of Three" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Doughnuts — Presentation Box</h3>
+                            <p>Three beautifully packaged soft doughnuts in a presentation box — the perfect treat to send as a sweet gift.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/pastries/IMG-20260720-WA0073.jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/pastries/IMG-20260720-WA0065(1).jpg" alt="Zobo Drink Bottles" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Zobo Fruit Drink</h3>
+                            <p>Refreshing Nigerian Zobo drink made from dried hibiscus petals, bottled and branded by Ifybee's — a popular event beverage.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/pastries/IMG-20260720-WA0065(1).jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/pastries/IMG-20260527-WA0038(1).jpg" alt="Zobo Drinks — Branded Display" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Zobo Drink — Display Set</h3>
+                            <p>A branded batch of Ifybee's Zobo drink bottles lined up and ready for event distribution or retail sale.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/pastries/IMG-20260527-WA0038(1).jpg" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/pastries/IMG-20260528-WA0016.jpg" preload="none">
+                                <source src="VIDEOS/VID-20260528-WA0023.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Pastry Kitchen — Baking Process</h3>
+                            <p>Watch real-time pastry production inside the Ifybee's kitchen — kneading, rolling, and batch-baking meat pies.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's kitchen baking demo.</div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/pastries/IMG-20260528-WA0018.jpg" preload="none">
+                                <source src="VIDEOS/VID-20260602-WA0045.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Confectionery Craft — Kitchen Demo</h3>
+                            <p>Behindthe-scenes kitchen video of preparing and assembling a variety of small chops and confectionery for an event order.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's kitchen confectionery video.</div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="pastries">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/pastries/IMG-20260720-WA0073.jpg" preload="none">
+                                <source src="VIDEOS/VID-20260608-WA0011.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Pastries &amp; Snacks</span>
+                            <h3>Pastry Packaging &amp; Presentation</h3>
+                            <p>Video showcase of freshly made pastries being packaged and presented — Ifybee's branded snack displays at their finest.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's snack packaging showcase.</div>
+                        </div>
+                    </article>
+
+                    <!-- ===== ACADEMY ===== -->
+
+                    <article class="gallery-card" data-category="academy">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/academy/A.webp" alt="Owner Demonstrating Cake Decoration" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Academy</span>
+                            <h3>Owner — Cake Decorating Demo</h3>
+                            <p>Ifybee's founder demonstrating fondant draping and decorating technique during a live academy class session.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/academy/A.webp" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="academy">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/academy/acade.webp" alt="Academy Class in Session" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Academy</span>
+                            <h3>Cake Science — Batter Mixing</h3>
+                            <p>Students measuring ingredients and perfecting batter consistency — understanding the science behind great cakes.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/academy/acade.webp" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="academy">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/academy/acsa.webp" alt="Student Cake Decorating" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Academy</span>
+                            <h3>Student — Fondant Decorating</h3>
+                            <p>A dark-complexioned academy student confidently decorating her cake — a proud moment captured during a recent class.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/academy/acsa.webp" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="academy">
+                        <div class="gallery-image-box">
+                            <img src="IMAGES/academy/file_000000003fd08246ad0846f3a525e5c6.png" alt="Ifybee's Academy Class Flyer" loading="lazy">
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Academy</span>
+                            <h3>Official Academy Class Poster</h3>
+                            <p>The official Ifybee's Baking Academy class announcement flyer — syllabus overview, dates, and registration details.</p>
+                            <div class="gallery-card-actions">
+                                <button type="button" class="action-btn preview-button"><i class="fa-solid fa-expand"></i> Preview</button>
+                                <a download href="IMAGES/academy/file_000000003fd08246ad0846f3a525e5c6.png" class="action-btn download-button"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="academy">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/academy/A.webp" preload="none">
+                                <source src="VIDEOS/VID_20260926_105441.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Academy</span>
+                            <h3>Owner — Teaching in the Studio</h3>
+                            <p>Video of Ifybee's owner — the fair-complexioned instructor — guiding students through cake leveling and frosting during a live studio session.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's Academy studio training footage.</div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card" data-category="academy">
+                        <div class="gallery-video-box">
+                            <video controls poster="IMAGES/academy/acade.webp" preload="none">
+                                <source src="VIDEOS/VID_20260926_144544.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-card-body">
+                            <span class="gallery-category">Academy</span>
+                            <h3>Interactive Mentorship Session</h3>
+                            <p>Hands-on one-on-one coaching video showing the instructor guiding a student through decorating techniques step by step.</p>
+                            <div class="source-credit"><strong>Video:</strong> Authentic Ifybee's mentorship session footage.</div>
+                        </div>
+                    </article>
+
+                    <div class="gallery-empty" id="galleryEmpty">
+                        <i class="fa-regular fa-image"></i>
+                        <h3>No items in this category</h3>
+                        <p>Please select another category tab above to view more items.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- # Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Image preview">
+        <div class="lightbox-box">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="lightbox-image-wrap">
+                <img src="" alt="Enlarged view" id="lightboxImg">
+            </div>
+            <div class="lightbox-details">
+                <div>
+                    <span class="badge badge-gold" id="lightboxCategory">Category</span>
+                    <h3 id="lightboxTitle">Title</h3>
+                    <p>Inspiration reference from Ifybee's Cakes &amp; Confectionery.</p>
+                </div>
+                <a download href="" id="lightboxDownload" class="button dark-button button-small">
+                    <i class="fa-solid fa-download"></i> Download Image
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- # Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="IMAGES/ifybeeslogo.jpg" alt="Ifybee's Logo">
+                    <p>
+                        Beautiful cakes, artisanal pastries, and practical baking education. Bringing joy to every celebration.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/ifybeescakesandevents?dlrf=NmtrNG05b2NtMGFi" target="_blank" class="footer-social-link" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@ifybeescakes001?_r=1&_t=ZS-9AV1gxz7m4N" target="_blank" class="footer-social-link" aria-label="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.facebook.com/IfybeesCakesAndEvents" target="_blank" class="footer-social-link" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Inspiration Gallery</a></li>
+                        <li><a href="academy.html">Baking Academy</a></li>
+                        <li><a href="about.html">About Ifybee's</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Offerings</h4>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Celebration Cakes</a></li>
+                        <li><a href="gallery.html">Nigerian Pastries &amp; Snacks</a></li>
+                        <li><a href="academy.html">Hands-on Classes</a></li>
+                        <li><a href="academy.html">Upcoming Cohort</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp:</strong><br>
+                                <a href="https://wa.me/2348121402824?text=Hello%20Ifybee%27s%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank">+234 812 140 2824</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Studio:</strong><br>
+                                <span>No. 18 Umuodu Ihitte Isi Mbieri, Opposite Mmesoma Building, Mbaitoli LGA, Owerri, Imo State, Nigeria</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; <span id="currentYear">2026</span> Ifybee's Cakes &amp; Confectionery. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- # Scripts -->
+    <script src="JS/main.js"></script>
+    <script src="JS/gallery.js"></script>
+</body>
+</html>

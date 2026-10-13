@@ -1,0 +1,382 @@
+{% extends "ifybeeCC/base.html" %}
+{% load static %}
+
+{% block title %}{{ site_setting.site_name }} | Home{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'CSS/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Homepage Hero Section -->
+<section class="hero">
+    <div class="slides">
+        {% if slides %}
+            {% for slide in slides %}
+                <div class="slide {% if forloop.first %}active{% endif %}" 
+                     style="background-image: url('{{ slide.get_image_url }}');">
+                </div>
+            {% endfor %}
+        {% else %}
+            <!-- Curated static fallbacks from actual cake & pastry assets -->
+            <div class="slide active" style="background-image: url('{% static 'IMAGES/cakes/cake image 3.jpg' %}');"></div>
+            <div class="slide" style="background-image: url('{% static 'IMAGES/pastries/IMG-20260528-WA0016.jpg' %}');"></div>
+            <div class="slide" style="background-image: url('{% static 'IMAGES/cakes/IMG_20250726_065808.jpg' %}');"></div>
+            <div class="slide" style="background-image: url('{% static 'IMAGES/pastries/IMG-20260527-WA0038(1).jpg' %}');"></div>
+            <div class="slide" style="background-image: url('{% static 'IMAGES/cakes/IMG_20251216_083501.jpg' %}');"></div>
+            <div class="slide" style="background-image: url('{% static 'IMAGES/pastries/IMG-20260528-WA0022.jpg' %}');"></div>
+            <div class="slide" style="background-image: url('{% static 'IMAGES/cakes/IMG_20260721_201640.jpg' %}');"></div>
+            <div class="slide" style="background-image: url('{% static 'IMAGES/pastries/meatpie.webp' %}');"></div>
+        {% endif %}
+    </div>
+    <div class="hero-dark"></div>
+    <div class="hero-content">
+        <p class="hero-label">{{ site_setting.hero_label|default:"IFYBEE'S CAKES & CONFECTIONERY" }}</p>
+        <h1>
+            A Taste.
+            <span>A Lifetime Delight.</span>
+        </h1>
+        <p class="hero-text">
+            Beautiful cakes, delicious pastries and unforgettable experiences, crafted with care for every occasion.
+        </p>
+        <div class="hero-buttons">
+            <a href="{% url 'ifybeeCC:gallery' %}" class="button main-button">
+                Explore Gallery
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="{% url 'ifybeeCC:academy' %}" class="button outline-button">
+                Baking Academy
+            </a>
+        </div>
+    </div>
+    <div class="hero-bottom">
+        <div class="slide-lines">
+            {% if slides %}
+                {% for slide in slides %}
+                    <button class="slide-line {% if forloop.first %}active{% endif %}" type="button" aria-label="Show slide {{ forloop.counter }}"></button>
+                {% endfor %}
+            {% else %}
+                <button class="slide-line active" type="button" aria-label="Show slide 1"></button>
+                <button class="slide-line" type="button" aria-label="Show slide 2"></button>
+                <button class="slide-line" type="button" aria-label="Show slide 3"></button>
+                <button class="slide-line" type="button" aria-label="Show slide 4"></button>
+                <button class="slide-line" type="button" aria-label="Show slide 5"></button>
+                <button class="slide-line" type="button" aria-label="Show slide 6"></button>
+                <button class="slide-line" type="button" aria-label="Show slide 7"></button>
+                <button class="slide-line" type="button" aria-label="Show slide 8"></button>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Brand Intro Section -->
+<section class="intro">
+    <div class="brand-mark">
+        <span></span>
+        <img src="{% static 'IMAGES/ifybeeslogo.jpg' %}" alt="{{ site_setting.site_name }}">
+        <span></span>
+    </div>
+    <p class="section-label">{{ site_setting.welcome_label }}</p>
+    <h2>
+        {{ site_setting.welcome_title }}
+    </h2>
+    <p>
+        {{ site_setting.welcome_text_1 }}
+    </p>
+    <p>
+        {{ site_setting.welcome_text_2 }}
+    </p>
+    <a href="{% url 'ifybeeCC:about' %}" class="text-link">
+        Discover Ifybee's
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+</section>
+
+<!-- Products / Fresh From Ifybee's Section -->
+<section class="products">
+    <div class="container">
+        <div class="section-heading">
+            <p class="section-label">FRESH FROM IFYBEE'S</p>
+            <h2>
+                Made to be
+                <span>remembered.</span>
+            </h2>
+            <p>
+                Discover some of our favourite cakes, pastries and sweet creations.
+            </p>
+        </div>
+        <div class="product-grid">
+            {% if featured_products %}
+                {% for item in featured_products %}
+                    <article class="card">
+                        <div class="card-image">
+                            {% if item.get_image_url %}
+                                <img src="{{ item.get_image_url }}" alt="{{ item.title }}">
+                            {% else %}
+                                <img src="{% static 'IMAGES/cakes/cake image 3.jpg' %}" alt="{{ item.title }}">
+                            {% endif %}
+                        </div>
+                        <div class="card-content">
+                            <p class="card-number">0{{ forloop.counter }}</p>
+                            <h3>{{ item.title }}</h3>
+                            <p>
+                                {{ item.caption|default:"Elegant creations made for moments worth remembering." }}
+                            </p>
+                            <a href="{% url 'ifybeeCC:gallery' %}" class="text-link">
+                                View in Gallery
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                {% endfor %}
+            {% else %}
+                <article class="card">
+                    <div class="card-image">
+                        <img src="{% static 'IMAGES/cakes/cake image 3.jpg' %}" alt="Celebration Cake">
+                    </div>
+                    <div class="card-content">
+                        <p class="card-number">01</p>
+                        <h3>Celebration Cake</h3>
+                        <p>
+                            Elegant cake creations made for moments worth remembering.
+                        </p>
+                        <a href="{% url 'ifybeeCC:gallery' %}" class="text-link">
+                            View in Gallery
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="{% static 'IMAGES/pastries/IMG-20260528-WA0018.jpg' %}" alt="Nigerian Snacks & Small Chops">
+                    </div>
+                    <div class="card-content">
+                        <p class="card-number">02</p>
+                        <h3>Nigerian Snacks & Small Chops</h3>
+                        <p>
+                            Freshly prepared puff puff, samosas, spring rolls, and seasoned party bites.
+                        </p>
+                        <a href="{% url 'ifybeeCC:gallery' %}" class="text-link">
+                            View in Gallery
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="{% static 'IMAGES/pastries/meatpie.webp' %}" alt="Fresh Pastries">
+                    </div>
+                    <div class="card-content">
+                        <p class="card-number">03</p>
+                        <h3>Fresh Pastries</h3>
+                        <p>
+                            Delicious pastry favourites prepared fresh for every craving.
+                        </p>
+                        <a href="{% url 'ifybeeCC:gallery' %}" class="text-link">
+                            View in Gallery
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            {% endif %}
+        </div>
+        <div class="center">
+            <a href="{% url 'ifybeeCC:gallery' %}" class="button dark-button">
+                Explore Full Gallery
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Academy Spotlight Section -->
+<section class="academy-home">
+    <div class="container">
+        <div class="academy-home-grid">
+            <div class="academy-home-image">
+                {% if featured_class and featured_class.get_image_url %}
+                    <img src="{{ featured_class.get_image_url }}" alt="{{ featured_class.title }}">
+                {% else %}
+                    <img src="{% static 'IMAGES/academy/A.webp' %}" alt="Ifybee's Baking Academy Workshop">
+                {% endif %}
+                <div class="academy-home-badge">
+                    <span>IFYBEE'S</span>
+                    <strong>ACADEMY</strong>
+                </div>
+            </div>
+            <div class="academy-home-content">
+                <p class="section-label">LEARN • CREATE • MASTER</p>
+                <h2>
+                    Turn your passion
+                    <span>into a skill.</span>
+                </h2>
+                <p>
+                    Learn the art of baking and confectionery through practical, engaging classes designed for beginners, aspiring bakers and anyone ready to take their creativity further.
+                </p>
+                <div class="class-box">
+                    <div class="class-number">
+                        <span>IFYBEE'S</span>
+                        <strong>01</strong>
+                    </div>
+                    <div class="class-info">
+                        <small>BAKING & CONFECTIONERY</small>
+                        <h3>{% if featured_class %}{{ featured_class.title }}{% else %}Professional Baking Masterclass{% endif %}</h3>
+                        <p>{% if featured_class %}{{ featured_class.date_info }} • {{ featured_class.get_status_display }}{% else %}Practical hands-on training • Upcoming cohort registration open{% endif %}</p>
+                    </div>
+                </div>
+                <a href="{% url 'ifybeeCC:academy' %}" class="button dark-button">
+                    Explore Academy
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Preview Grid Section -->
+<section class="gallery-preview">
+    <div class="container">
+        <div class="section-heading">
+            <p class="section-label">THE IFYBEE'S EXPERIENCE</p>
+            <h2>
+                Every creation tells
+                <span>a story.</span>
+            </h2>
+            <p>
+                Cakes, pastries, celebrations and moments made with love. A glimpse into everything happening at Ifybee's Cakes & Confectionery.
+            </p>
+        </div>
+        <div class="gallery-preview-grid">
+            {% if gallery_preview %}
+                {% for item in gallery_preview %}
+                    <div class="gallery-preview-item">
+                        {% if item.get_image_url %}
+                            <img src="{{ item.get_image_url }}" alt="{{ item.title }}">
+                        {% else %}
+                            <img src="{% static 'IMAGES/cakes/cake image 3.jpg' %}" alt="{{ item.title }}">
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="gallery-preview-item">
+                    <img src="{% static 'IMAGES/cakes/IMG_20261010_130340.jpg' %}" alt="Chocolate Drip Rose Cake">
+                </div>
+                <div class="gallery-preview-item">
+                    <img src="{% static 'IMAGES/cakes/IMG_20260801_111223.jpg' %}" alt="Golden Draped Celebration Cake">
+                </div>
+                <div class="gallery-preview-item">
+                    <img src="{% static 'IMAGES/pastries/IMG-20260528-WA0016.jpg' %}" alt="Fresh Oven-Baked Pastries">
+                </div>
+                <div class="gallery-preview-item">
+                    <img src="{% static 'IMAGES/pastries/IMG-20260527-WA0038(1).jpg' %}" alt="Zobo Fruit Drink Display">
+                </div>
+                <div class="gallery-preview-item">
+                    <img src="{% static 'IMAGES/cakes/IMG_20251215_114912.jpg' %}" alt="Blossom Floral Birthday Cake">
+                </div>
+                <div class="gallery-preview-item">
+                    <img src="{% static 'IMAGES/pastries/IMG-20260720-WA0073.jpg' %}" alt="Doughnuts in Presentation Box">
+                </div>
+                <div class="gallery-preview-item">
+                    <img src="{% static 'IMAGES/cakes/IMG_20260926_233223.jpg' %}" alt="Heritage Celebration Cake">
+                </div>
+                <div class="gallery-preview-item">
+                    <img src="{% static 'IMAGES/academy/acsa.webp' %}" alt="Academy Student Finished Project">
+                </div>
+            {% endif %}
+        </div>
+        <div class="center">
+            <a href="{% url 'ifybeeCC:gallery' %}" class="button gold-button">
+                Explore Full Gallery
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why">
+    <div class="container">
+        <div class="section-heading">
+            <p class="section-label">THE IFYBEE'S DIFFERENCE</p>
+            <h2>
+                More than
+                <span>just baking.</span>
+            </h2>
+            <p>
+                Every creation is made with attention to detail, creativity and a genuine passion for making every experience special.
+            </p>
+        </div>
+        <div class="why-grid">
+            <article class="why-card">
+                <div class="why-icon">
+                    <i class="fa-solid fa-cake-candles"></i>
+                </div>
+                <span>01</span>
+                <h3>Made With Care</h3>
+                <p>
+                    Every cake and pastry is carefully prepared with attention to flavour, presentation and detail.
+                </p>
+            </article>
+            <article class="why-card">
+                <div class="why-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <span>02</span>
+                <h3>Creative Designs</h3>
+                <p>
+                    From simple elegance to completely unique ideas, your vision can become something truly special.
+                </p>
+            </article>
+            <article class="why-card">
+                <div class="why-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <span>03</span>
+                <h3>Made For You</h3>
+                <p>
+                    Whether it is a celebration, event or ordinary day, every order is created with you in mind.
+                </p>
+            </article>
+            <article class="why-card">
+                <div class="why-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <span>04</span>
+                <h3>Learn & Grow</h3>
+                <p>
+                    Our academy gives aspiring bakers the opportunity to learn practical skills and build confidence.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="cta">
+    <div class="container">
+        <div class="cta-logo">
+            <img src="{% static 'IMAGES/ifybeeslogo.jpg' %}" alt="{{ site_setting.site_name }}">
+        </div>
+        <p class="section-label">READY WHEN YOU ARE</p>
+        <h2>
+            Let's create your
+            <span>next sweet memory.</span>
+        </h2>
+        <p>
+            Whether you're celebrating, ordering something delicious, planning an event or ready to learn, Ifybee's is here to make it special.
+        </p>
+        <div class="cta-buttons">
+            <a href="{% url 'ifybeeCC:gallery' %}" class="button outline-button">
+                Explore Gallery
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'JS/home.js' %}"></script>
+{% endblock %}
+

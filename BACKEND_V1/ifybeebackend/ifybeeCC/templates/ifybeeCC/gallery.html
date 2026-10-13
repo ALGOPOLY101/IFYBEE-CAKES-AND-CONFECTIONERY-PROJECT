@@ -1,0 +1,222 @@
+{% extends "ifybeeCC/base.html" %}
+{% load static %}
+
+{% block title %}Inspiration Gallery | {{ site_setting.site_name }}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'CSS/gallery.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Gallery Hero -->
+<section class="page-hero">
+    <div class="container">
+        <h1>The Inspiration <span>Gallery.</span></h1>
+        <p class="page-hero-desc">
+            Explore our visual showcase of signature celebration cakes, golden pastries, and hands-on academy sessions. Browse photos, watch video previews, and download images for your creative inspiration.
+        </p>
+    </div>
+</section>
+
+<!-- Gallery Content Section -->
+<section class="section" style="padding-top: 35px;">
+    <div class="container">
+        <!-- Category Filter Buttons -->
+        <div class="filters">
+            <button class="filter-button active" data-filter="all">All Media</button>
+            <button class="filter-button" data-filter="cakes">Cakes</button>
+            <button class="filter-button" data-filter="pastries">Pastries</button>
+            <button class="filter-button" data-filter="academy">Academy</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+            {% if items %}
+                {% for item in items %}
+                    <article class="gallery-card" data-category="{{ item.category }}">
+                        {% if item.is_video %}
+                            <div class="gallery-video-box">
+                                <video controls poster="{% if item.get_image_url %}{{ item.get_image_url }}{% else %}{% static 'IMAGES/cakes/cake image 3.jpg' %}{% endif %}" preload="none">
+                                    <source src="{{ item.get_video_url }}" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <div class="gallery-card-body">
+                                <span class="gallery-category">{{ item.get_category_display }}</span>
+                                <h3>{{ item.title }}</h3>
+                                {% if item.caption %}<p>{{ item.caption }}</p>{% endif %}
+                                {% if item.source_credit %}
+                                    <div class="source-credit">
+                                        <strong>Media Reference:</strong> {{ item.source_credit }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        {% else %}
+                            <div class="gallery-image-box">
+                                <img src="{{ item.get_image_url }}" alt="{{ item.title }}" loading="lazy">
+                            </div>
+                            <div class="gallery-card-body">
+                                <span class="gallery-category">{{ item.get_category_display }}</span>
+                                <h3>{{ item.title }}</h3>
+                                {% if item.caption %}<p>{{ item.caption }}</p>{% endif %}
+                                <div class="gallery-card-actions">
+                                    <button type="button" class="action-btn preview-button">
+                                        <i class="fa-solid fa-expand"></i> Preview
+                                    </button>
+                                    <a download href="{{ item.get_image_url }}" class="action-btn download-button">
+                                        <i class="fa-solid fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </article>
+                {% endfor %}
+            {% else %}
+                <!-- Graceful Fallback Items if Database is initially unpopulated -->
+                <!-- Cake fallback items -->
+                <article class="gallery-card" data-category="cakes">
+                    <div class="gallery-image-box">
+                        <img src="{% static 'IMAGES/cakes/cake image 3.jpg' %}" alt="Celebration Floral Cake" loading="lazy">
+                    </div>
+                    <div class="gallery-card-body">
+                        <span class="gallery-category">Cakes</span>
+                        <h3>Celebration Floral Cake</h3>
+                        <p>Artisanal celebration cake decorated with handmade floral accents and delicate piping.</p>
+                        <div class="gallery-card-actions">
+                            <button type="button" class="action-btn preview-button">
+                                <i class="fa-solid fa-expand"></i> Preview
+                            </button>
+                            <a download href="{% static 'IMAGES/cakes/cake image 3.jpg' %}" class="action-btn download-button">
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="gallery-card" data-category="cakes">
+                    <div class="gallery-video-box">
+                        <video controls poster="{% static 'IMAGES/cakes/IMG_20261010_130340.jpg' %}" preload="none">
+                            <source src="{% static 'VIDEOS/VID-20261010-WA0055.mp4' %}" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <div class="gallery-card-body">
+                        <span class="gallery-category">Cakes</span>
+                        <h3>Cake Finishing — Live Reveal</h3>
+                        <p>Watch a freshly finished celebration cake being revealed on the turntable with final piping details.</p>
+                        <div class="source-credit">
+                            <strong>Video:</strong> Ifybee studio creation reveal.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Pastry fallback items -->
+                <article class="gallery-card" data-category="pastries">
+                    <div class="gallery-image-box">
+                        <img src="{% static 'IMAGES/pastries/meatpie.webp' %}" alt="Golden Flaky Meat Pies" loading="lazy">
+                    </div>
+                    <div class="gallery-card-body">
+                        <span class="gallery-category">Pastries</span>
+                        <h3>Golden Flaky Meat Pies</h3>
+                        <p>Richly spiced minced meat and vegetable filling encased in buttery, flaky shortcrust pastry.</p>
+                        <div class="gallery-card-actions">
+                            <button type="button" class="action-btn preview-button">
+                                <i class="fa-solid fa-expand"></i> Preview
+                            </button>
+                            <a download href="{% static 'IMAGES/pastries/meatpie.webp' %}" class="action-btn download-button">
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="gallery-card" data-category="pastries">
+                    <div class="gallery-video-box">
+                        <video controls poster="{% static 'IMAGES/pastries/IMG-20260528-WA0016.jpg' %}" preload="none">
+                            <source src="{% static 'VIDEOS/VID-20260528-WA0023.mp4' %}" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <div class="gallery-card-body">
+                        <span class="gallery-category">Pastries</span>
+                        <h3>Pastry Kitchen — Baking Process</h3>
+                        <p>Inside the bakery kitchen watching savory meat pies being filled, crimped, and baked to golden perfection.</p>
+                        <div class="source-credit">
+                            <strong>Video:</strong> Authentic kitchen baking process.
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Academy fallback items -->
+                <article class="gallery-card" data-category="academy">
+                    <div class="gallery-image-box">
+                        <img src="{% static 'IMAGES/academy/A.webp' %}" alt="Decorating Workshop" loading="lazy">
+                    </div>
+                    <div class="gallery-card-body">
+                        <span class="gallery-category">Academy</span>
+                        <h3>Decorating Workshop</h3>
+                        <p>Students engaged in hands-on fondant draping and cake structure technique practicals.</p>
+                        <div class="gallery-card-actions">
+                            <button type="button" class="action-btn preview-button">
+                                <i class="fa-solid fa-expand"></i> Preview
+                            </button>
+                            <a download href="{% static 'IMAGES/academy/A.webp' %}" class="action-btn download-button">
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="gallery-card" data-category="academy">
+                    <div class="gallery-video-box">
+                        <video controls poster="{% static 'IMAGES/academy/acade.webp' %}" preload="none">
+                            <source src="{% static 'VIDEOS/VID_20260926_105441.mp4' %}" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                    </div>
+                    <div class="gallery-card-body">
+                        <span class="gallery-category">Academy</span>
+                        <h3>Academy Studio in Action</h3>
+                        <p>Watch how students learn hands-on cake leveling, buttercream piping, and fondant molding during practical training.</p>
+                        <div class="source-credit">
+                            <strong>Video:</strong> Academy classroom practical preview.
+                        </div>
+                    </div>
+                </article>
+            {% endif %}
+
+            <div class="gallery-empty" id="galleryEmpty">
+                <i class="fa-regular fa-image"></i>
+                <h3>No items in this category</h3>
+                <p>Please select another category tab above to view more creations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal for Full Image Previews -->
+<div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Image preview">
+    <div class="lightbox-box">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="lightbox-image-wrap">
+            <img src="" alt="Enlarged view" id="lightboxImg">
+        </div>
+        <div class="lightbox-details">
+            <div>
+                <span class="badge badge-gold" id="lightboxCategory">Category</span>
+                <h3 id="lightboxTitle">Title</h3>
+                <p>Inspiration reference from {{ site_setting.site_name }}.</p>
+            </div>
+            <a download href="" id="lightboxDownload" class="button dark-button button-small">
+                <i class="fa-solid fa-download"></i> Download Image
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'JS/gallery.js' %}"></script>
+{% endblock %}
+

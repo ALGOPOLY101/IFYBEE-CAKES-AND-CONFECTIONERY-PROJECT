@@ -1,0 +1,313 @@
+{% extends "ifybeeCC/base.html" %}
+{% load static %}
+
+{% block title %}Baking Academy | {{ site_setting.site_name }}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'CSS/academy.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Academy Hero -->
+<section class="page-hero">
+    <div class="container">
+        <span class="notice-pill"><i class="fa-solid fa-graduation-cap"></i> Hands-on Training</span>
+        <h1>Ifybee's Baking <span>Academy.</span></h1>
+        <p class="page-hero-desc">
+            Learn the art and master the craft. Step into our kitchen to explore practical cake baking techniques, professional fondant decorating, and artisan pastry making under encouraging mentorship.
+        </p>
+    </div>
+</section>
+
+<!-- Current Featured Class Spotlight -->
+<section class="section">
+    <div class="container">
+        <div class="current-class">
+            <div class="current-class-details">
+                <div class="status-row">
+                    <span class="status-pill">
+                        <span class="dot"></span>
+                        {% if current_class %}
+                            {{ current_class.get_status_display }}
+                        {% else %}
+                            Registration Open
+                        {% endif %}
+                    </span>
+                    <span class="badge badge-purple">Workshop Cohort</span>
+                </div>
+
+                <h2>
+                    {% if current_class %}
+                        {{ current_class.title }} <span>{{ current_class.subtitle }}</span>
+                    {% else %}
+                        Cake Baking & Fondant <span>Masterclass</span>
+                    {% endif %}
+                </h2>
+                <p class="class-desc">
+                    {% if current_class %}
+                        {{ current_class.description }}
+                    {% else %}
+                        A comprehensive practical bootcamp for aspiring bakers and enthusiasts. Learn how to bake delicious sponge cakes from scratch, achieve sharp buttercream edges, sculpt fondant decorations, and bake commercial pastries.
+                    {% endif %}
+                </p>
+
+                <div class="meta-grid">
+                    <div class="meta-box">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <div>
+                            <strong>Date:</strong>
+                            <span>{% if current_class %}{{ current_class.date_info }}{% else %}[Next Cohort: 15th – 20th Next Month]{% endif %}</span>
+                        </div>
+                    </div>
+                    <div class="meta-box">
+                        <i class="fa-regular fa-clock"></i>
+                        <div>
+                            <strong>Schedule:</strong>
+                            <span>{% if current_class %}{{ current_class.schedule_info }}{% else %}10:00 AM – 3:00 PM Daily{% endif %}</span>
+                        </div>
+                    </div>
+                    <div class="meta-box">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Location:</strong>
+                            <span>{% if current_class %}{{ current_class.location }}{% else %}{{ site_setting.address }}{% endif %}</span>
+                        </div>
+                    </div>
+                    <div class="meta-box">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <div>
+                            <strong>Skill Level:</strong>
+                            <span>{% if current_class %}{{ current_class.skill_level }}{% else %}Beginner to Intermediate{% endif %}</span>
+                        </div>
+                    </div>
+                    <div class="meta-box">
+                        <i class="fa-solid fa-utensils"></i>
+                        <div>
+                            <strong>Tools & Materials:</strong>
+                            <span>{% if current_class %}{{ current_class.materials_note }}{% else %}Provided in class{% endif %}</span>
+                        </div>
+                    </div>
+                    <div class="meta-box">
+                        <i class="fa-solid fa-certificate"></i>
+                        <div>
+                            <strong>Certificate:</strong>
+                            <span>{% if current_class %}{{ current_class.certificate_note }}{% else %}Issued upon completion{% endif %}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="registration-box">
+                    <a href="{% if current_class and current_class.whatsapp_message %}{{ site_setting.get_whatsapp_url|slice:':-1' }}{{ current_class.whatsapp_message }}{% else %}{{ site_setting.get_whatsapp_url }}{% endif %}" target="_blank" class="button button-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Register on WhatsApp
+                    </a>
+                    <small>
+                        * Tap to send a pre-filled WhatsApp message. Our academy coordinator will provide syllabus details, fee structure, and reserve your seat.
+                    </small>
+                </div>
+            </div>
+
+            <div class="current-class-image">
+                {% if current_class and current_class.get_image_url %}
+                    <img src="{{ current_class.get_image_url }}" alt="{{ current_class.title }}">
+                {% else %}
+                    <img src="{% static 'IMAGES/academy/A.webp' %}" alt="Practical Baking Academy Class in Session">
+                {% endif %}
+                <div class="image-tag">
+                    <span>Hands-on Learning</span>
+                    <strong>Real Studio Practicals</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Curriculum Breakdown -->
+        <div class="section-heading">
+            <span class="section-label">WHAT YOU WILL LEARN</span>
+            <h2>Structured for <span>real-world skills.</span></h2>
+            <p>
+                Our syllabus balances clear instruction with hands-on application, ensuring every student leaves with genuine kitchen confidence.
+            </p>
+        </div>
+
+        <div class="curriculum-grid">
+            {% if curriculum_modules %}
+                {% for module in curriculum_modules %}
+                    <div class="curriculum-card">
+                        <div class="module-num">{{ module.module_number }}</div>
+                        <h3>{{ module.title }}</h3>
+                        <p>{{ module.description }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="curriculum-card">
+                    <div class="module-num">01</div>
+                    <h3>Cake Science & Sponges</h3>
+                    <p>
+                        Master recipes for vanilla sponge, moist chocolate, and velvety red velvet. Understand ingredient functions, leaveners, and oven temperature control.
+                    </p>
+                </div>
+                <div class="curriculum-card">
+                    <div class="module-num">02</div>
+                    <h3>Buttercream & Sharp Edges</h3>
+                    <p>
+                        Whip silky American and Swiss meringue buttercreams. Learn leveling, crumb coating, smooth acrylic disk finishes, and textured comb techniques.
+                    </p>
+                </div>
+                <div class="curriculum-card">
+                    <div class="module-num">03</div>
+                    <h3>Fondant & Sugar Art</h3>
+                    <p>
+                        Roll, drape, and smooth fondant without tears. Create delicate sugar blossoms, borders, bows, and silicone mold design accents.
+                    </p>
+                </div>
+                <div class="curriculum-card">
+                    <div class="module-num">04</div>
+                    <h3>Commercial Pastry & Costing</h3>
+                    <p>
+                        Bake flaky golden meat pies, roll sausage snacks, and fry glazed doughnuts. Learn recipe costing, cake pricing formulas, and bakery management basics.
+                    </p>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Class Video Feature -->
+        <div class="academy-featured-video">
+            <div class="featured-video-box">
+                <video controls poster="{% static 'IMAGES/academy/acade.webp' %}" preload="none">
+                    <source src="{% static 'VIDEOS/VID_20260926_105441.mp4' %}" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+            <div class="featured-video-text">
+                <span class="section-label">VIDEO PREVIEW</span>
+                <h3>See Learning <span>Come to Life.</span></h3>
+                <p>
+                    Get a direct look inside our academy studio. Watch how students learn hands-on cake leveling, buttercream piping, and fondant molding during practical training.
+                </p>
+                <div class="video-credit-note">
+                    <strong>Studio Video:</strong> Academy classroom practical preview.
+                </div>
+            </div>
+        </div>
+
+        <!-- Previous Classes Moments -->
+        <div class="section-heading">
+            <span class="section-label">ACADEMY MOMENTS</span>
+            <h2>Memories from <span>past workshops.</span></h2>
+            <p>
+                Take a look at students creating, learning, and celebrating their baking milestones together.
+            </p>
+        </div>
+
+        <div class="academy-grid">
+            {% if class_media %}
+                {% for item in class_media %}
+                    <div class="academy-card">
+                        <div class="academy-card-img">
+                            {% if item.media_type == 'video' %}
+                                <video controls poster="{% if item.get_image_url %}{{ item.get_image_url }}{% else %}{% static 'IMAGES/academy/acade.webp' %}{% endif %}" style="width: 100%; height: 100%; object-fit: cover;" preload="none">
+                                    <source src="{{ item.get_video_url }}" type="video/mp4">
+                                </video>
+                            {% else %}
+                                <img src="{{ item.get_image_url }}" alt="{{ item.title }}">
+                            {% endif %}
+                        </div>
+                        <div class="academy-card-body">
+                            <h4>{{ item.title }}</h4>
+                            <p>{{ item.caption }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="academy-card">
+                    <div class="academy-card-img">
+                        <img src="{% static 'IMAGES/academy/acade.webp' %}" alt="Students in an active baking workshop">
+                    </div>
+                    <div class="academy-card-body">
+                        <h4>Hands-on Practice</h4>
+                        <p>Learners measuring ingredients and mastering mixing techniques.</p>
+                    </div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-card-img">
+                        <img src="{% static 'IMAGES/academy/acsa.webp' %}" alt="Collaborative cake decorating session">
+                    </div>
+                    <div class="academy-card-body">
+                        <h4>Interactive Decorating</h4>
+                        <p>Students practicing precise piping and fondant application.</p>
+                    </div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-card-img">
+                        <img src="{% static 'IMAGES/academy/file_000000003fd08246ad0846f3a525e5c6.png' %}" alt="Official class syllabus announcement">
+                    </div>
+                    <div class="academy-card-body">
+                        <h4>Class Announcements</h4>
+                        <p>Official promotional updates and syllabus overviews for upcoming classes.</p>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Announcements & Notices -->
+        <div class="section-heading">
+            <span class="section-label">ANNOUNCEMENTS & UPDATES</span>
+            <h2>Latest academy <span>notices.</span></h2>
+        </div>
+
+        <div class="announcements-grid">
+            {% if announcements %}
+                {% for item in announcements %}
+                    <div class="announcement-card {% if item.is_gold_border %}gold-border{% endif %}">
+                        <div class="announcement-date">{{ item.badge_text }}</div>
+                        <h3>{{ item.title }}</h3>
+                        <p>{{ item.description }}</p>
+                        <a href="{{ site_setting.get_whatsapp_url }}" target="_blank" class="text-link">
+                            Inquire on WhatsApp <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="announcement-card">
+                    <div class="announcement-date">Upcoming Schedule</div>
+                    <h3>Weekend Intensive Workshop</h3>
+                    <p>
+                        Designed specifically for busy working professionals and students who cannot attend weekday bootcamps. Covers complete cake baking and frosting over two intensive Saturdays.
+                    </p>
+                    <a href="{{ site_setting.get_whatsapp_url }}" target="_blank" class="text-link">
+                        Inquire on WhatsApp <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="announcement-card gold-border">
+                    <div class="announcement-date">Private Mentorship</div>
+                    <h3>One-on-One Practical Sessions</h3>
+                    <p>
+                        Want dedicated individual coaching on custom sugar flowers, tiered wedding cake construction, or advanced pastry craft? Personalized private sessions can be scheduled.
+                    </p>
+                    <a href="{{ site_setting.get_whatsapp_url }}" target="_blank" class="text-link">
+                        Inquire on WhatsApp <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Academy Enrollment CTA Banner -->
+<section class="cta-banner" style="background: linear-gradient(135deg, #180a26 0%, #230c3b 60%, #35115a 100%); color: #ffffff; padding: 75px 0; text-align: center; border-top: 1px solid rgba(198, 155, 37, 0.25);">
+    <div class="container">
+        <div class="cta-banner-box" style="max-width: 720px; margin: 0 auto;">
+            <span class="section-label">ENROLL TODAY</span>
+            <h2 style="color: #ffffff; font-size: 44px; margin-bottom: 16px;">Ready to start your <span>baking journey?</span></h2>
+            <p style="color: #eae3ee; font-size: 16px; margin-bottom: 30px; line-height: 1.7;">
+                Seats are limited per cohort to ensure personalized attention for every student. Contact us via WhatsApp to register.
+            </p>
+            <div class="cta-actions" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="{% url 'ifybeeCC:gallery' %}" class="button outline-button">
+                    View Gallery Creations
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
